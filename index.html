@@ -11,28 +11,18 @@
             console.log(url);
 
             var params = new URLSearchParams(url.search);
+            console.log(params);
             var playlistID = params.get("list");
+            console.log(playlistID);
 
-            var result = "";
-            if (playlistID) {
-                result = ("Playlist ID:", playlistID);
-            } else {
-                result = ("No playlist ID found.");
-            }
+            // var result = "";
+            // if (playlistID) {
+            //     result = (playlistID);
+            // } else {
+            //     result = null;
+            // }
+            document.write("<h1>Playlist ID: " + playlistID + "</h1>");
             
-            document.write(`
-                <html>
-                <body>
-                    <h1>
-                        <a
-                            href="https://www.youtube.com/playlist?list=${result}"
-                        >
-                        https://www.youtube.com/playlist?list=${result}</a>
-                    </h1>
-                </body>
-                </html>
-            `);
-
         };
     </script>
 </head>
@@ -40,6 +30,11 @@
 </body>
 </html>
 
+
+<!-- 
+http://127.0.0.1:5500/runned.html?uVWJoU1Yv1U,aTvtb6syC9Q,khwlvvKc8Dk
+-->
+    
 
 <!-- 
 https://jeffeuxmartin.github.io/redirect-jubelee/?uVWJoU1Yv1U,aTvtb6syC9Q,khwlvvKc8Dk
