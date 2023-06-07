@@ -3,41 +3,27 @@
 <head>
     <title>Dynamic Page Generator</title>
     <script>
-        // window.onload = function() {
-        //     var urlParams = new URLSearchParams(window.location.search);
-        //     var [value] = ([...urlParams.keys()]);
+        window.onload = function() {
+            var urlParams = new URLSearchParams(window.location.search);
+            var [value] = ([...urlParams.keys()]);
 
-        //     var url = `https://www.youtube.com/watch_videos?video_ids=${value}`;
-        //     console.log(url);
+            var url = `https://www.youtube.com/watch_videos?video_ids=${value}`;
+            console.log(url);
 
-        //     var params = new URLSearchParams(url.search);
-        //     console.log(params);
-        //     var playlistID = params.get("list");
-        //     console.log(playlistID);
+            var params = new URLSearchParams(url.search);
+            console.log(params);
+            var playlistID = params.get("list");
+            console.log(playlistID);
 
-        //     // var result = "";
-        //     // if (playlistID) {
-        //     //     result = (playlistID);
-        //     // } else {
-        //     //     result = null;
-        //     // }
-        //     document.write("<h1>Playlist ID: " + playlistID + "</h1>");
-        //     
-        // };
-        
-        window.onload = () => {
-var url = "https://www.youtube.com/watch?v=uVWJoU1Yv1U&list=somethingsomethingsomethingsomethingsomething";
-
-var params = new URLSearchParams(url.search);
-var playlistID = params.get("list");
-
-if (playlistID) {
-  console.log("V Playlist ID:", playlistID);
-} else {
-  console.log("No playlist ID found.");
-}
-
-        }
+            // var result = "";
+            // if (playlistID) {
+            //     result = (playlistID);
+            // } else {
+            //     result = null;
+            // }
+            document.write("<h1>Playlist ID: " + playlistID + "</h1>");
+            
+        };
     </script>
 </head>
 <body>
