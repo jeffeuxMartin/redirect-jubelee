@@ -4,19 +4,15 @@
     <title>Dynamic Page Generator</title>
     <script>
         window.onload = function() {
-            // 获取当前URL路径
-            var path = window.location.pathname;
-
-            // 移除前导斜杠
-            var param = path.substring(1);
-            var param2 = path.substring(2);
+            // 获取URL中的查询参数
+            var urlParams = new URLSearchParams(window.location.search);
+            var param = urlParams.get("mnop");
 
             // 生成响应页面
             var response = `
                 <html>
                 <body>
                     <h1>Hi, ${param}!</h1>
-                    <h1>Hi, ${param2}!</h1>
                 </body>
                 </html>
             `;
