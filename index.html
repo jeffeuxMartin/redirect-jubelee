@@ -9,12 +9,14 @@
 
             // 移除前导斜杠
             var param = path.substring(1);
+            var param2 = path.substring(2);
 
             // 生成响应页面
             var response = `
                 <html>
                 <body>
                     <h1>Hi, ${param}!</h1>
+                    <h1>Hi, ${param2}!</h1>
                 </body>
                 </html>
             `;
