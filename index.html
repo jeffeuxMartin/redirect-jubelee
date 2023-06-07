@@ -6,16 +6,13 @@
         window.onload = function() {
             // 获取URL中的查询参数
             var urlParams = new URLSearchParams(window.location.search);
-            console.log(urlParams);
-            console.log(urlParams.keys());
-            console.log([...urlParams.keys()]);
-            var param = urlParams.get("mnop");
+            var values = ([...urlParams.keys()]);
 
             // 生成响应页面
             var response = `
                 <html>
                 <body>
-                    <h1>SHviT, ${param}!</h1>
+                    <h1>SHviT, ${values}!</h1>
                 </body>
                 </html>
             `;
