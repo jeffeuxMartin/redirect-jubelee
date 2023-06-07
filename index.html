@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Page Generator</title>
+    <script>
+        window.onload = function() {
+            // 获取当前URL路径
+            var path = window.location.pathname;
+
+            // 移除前导斜杠
+            var param = path.substring(1);
+
+            // 生成响应页面
+            var response = `
+                <html>
+                <body>
+                    <h1>Hi, ${param}!</h1>
+                </body>
+                </html>
+            `;
+
+            // 将响应页面写入文档
+            document.write(response);
+        };
+    </script>
+</head>
+<body>
+</body>
+</html>
