@@ -12,11 +12,20 @@
             var params = new URLSearchParams(url.search);
             var playlistID = params.get("list");
 
+            var result = "";
             if (playlistID) {
-                console.log("Playlist ID:", playlistID);
+                result = ("Playlist ID:", playlistID);
             } else {
-                console.log("No playlist ID found.");
+                result = ("No playlist ID found.");
             }
+            
+            document.write(`
+                <html>
+                <body>
+                    <h1>SHviT, ${values}!</h1>
+                </body>
+                </html>
+            `);
 
         };
     </script>
