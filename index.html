@@ -4,21 +4,20 @@
     <title>Dynamic Page Generator</title>
     <script>
         window.onload = function() {
-            // 获取URL中的查询参数
             var urlParams = new URLSearchParams(window.location.search);
-            var values = ([...urlParams.keys()]);
+            var [value] = ([...urlParams.keys()]);
 
-            // 生成响应页面
-            var response = `
-                <html>
-                <body>
-                    <h1>SHviT, ${values}!</h1>
-                </body>
-                </html>
-            `;
+            var url = `https://www.youtube.com/watch_videos?video_ids=${value}`;
 
-            // 将响应页面写入文档
-            document.write(response);
+            var params = new URLSearchParams(url.search);
+            var playlistID = params.get("list");
+
+            if (playlistID) {
+                console.log("Playlist ID:", playlistID);
+            } else {
+                console.log("No playlist ID found.");
+            }
+
         };
     </script>
 </head>
